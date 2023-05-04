@@ -1,0 +1,10 @@
+header {
+    width: 100vw;
+    height: 10vh;
+    background-image: url('../img/fundo-topo.jpg');
+    background-size: 100vw 100%;
+}
+.logo_header {
+    margin: 0 0 0 46%;
+
+}
