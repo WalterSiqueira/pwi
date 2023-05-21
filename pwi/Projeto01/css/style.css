@@ -553,7 +553,7 @@
         grid-area: footer;
     }
 }
-@media screen and (min-width: 1024px) and (max-width: 1440px) { /*original size 1365px*/
+@media screen and (min-width: 481px) and (max-width: 800px) {
     * {
         margin: 0;
         padding: 0;
@@ -573,12 +573,229 @@
             display: none;
         }
         .logo_header {
-            margin: 0 0 0 46%;
+            margin: 0 0 0 43.5%;
             padding: 1% 0 1% 0;
         }
         nav {
-            margin: 9.3% 0 0 0;
-            padding: 0 0 0 32.6%;
+            margin: 11.3% 0 0 0;
+            padding: 0 0 0 29.2%;
+            display: flex;
+            flex-flow: row wrap;
+            background-color: white;
+            width: 61.1%;
+            height: 4.2vh;
+            color: black;
+            font-size: 1.4em;
+        }
+            .nav_option:hover {
+                color: blue;
+                cursor: pointer;
+            }
+            .patinha_img {
+                width: 3%;
+                height: 50%;
+                margin: 1.3% 1% 0 1%;
+            }
+    .sobre_nos_sec {
+        display: flex;
+        flex-flow: row nowrap;
+        background-color: #A5FF97;
+        margin: 3% 0 0 0;
+    }
+        .text_sobre_sec {
+            width: 50%;
+            font-size: 1.4em;
+            padding: 1% 1% 1% 1%;
+        }
+        .img_sobre_sec {
+            width: 50%;
+            padding: 1%;
+        }
+            .filhotes_sobre {
+                width: 90%;
+                height: 100%;
+                margin: 0 0 0 5%;
+            }
+    .produtos_sec {
+        display: grid;
+        height: 100%;
+        grid-template-areas: 
+            'main main main'
+            'prod1 prod2 prod3';
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr;
+    }
+        .main_text_prod {
+            grid-area: main;
+            text-align: center;
+            font-size: 1.2em;
+            padding: 2% 0 0 0;
+        }
+        .prod_1 {
+            grid-area: prod1;
+            margin-left: 15%;
+        }
+        .prod_2 {
+            grid-area: prod2;
+            margin-left: 15%;
+        }
+            .prod_img2 {
+                margin-bottom: 5%;  
+            }
+        .prod_3 {
+            grid-area: prod3;
+            margin-left: 15%;
+        }
+            .prod_img3 {
+                margin-bottom: 12%;  
+            }
+            .prod_btn {
+                width: 35%;
+                height: 20%;
+                background-color: #A5FF97;
+                border: 2px solid #8ae97b;
+                font-size: 1.2em;
+            }
+                .patinha_img_prod {
+                    width: 15%;
+                    height: 40%;
+                    margin: 0 2% 0 0;
+                }
+    .servicos_section {
+        display: flex;
+        flex-flow: row wrap;
+        width: auto;
+        height: 77vh;
+        padding: 1%;
+        justify-content: space-between;
+        background-color: #A5FF97;
+    }
+        .text_serv {
+            width: 49%;
+            height: 100%;
+        }
+            .title_txt {
+                font-size: 2em;
+                margin: 0 0 5% 0;
+            }
+            .p_txt {
+                font-size: 1.2em;
+            }
+        .img_serv {
+            width: 49%;
+            height: 100%;
+            display: grid;
+            grid-template-areas:
+                'img1 img2'
+                'img3 img4';
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            grid-gap: 1%;
+        }
+            .img1 {
+                grid-area: img1;
+                width: 100%;
+                height: 100%;
+            }
+            .img2 {
+                grid-area: img2;
+                width: 100%;
+                height: 100%;
+            }
+            .img3 {
+                grid-area: img3;
+                width: 100%;
+                height: 100%;
+            }
+            .img4 {
+                grid-area: img4;
+                width: 100%;
+                height: 100%;
+            }
+        .contato_sec {
+            display: grid;
+            grid-template-areas:
+                'text text text'
+                'form . map';
+            grid-template-columns: 1fr 0.1fr 1fr;
+            grid-template-rows: auto auto;
+            padding: 1%;
+            grid-gap: 2%;
+        }
+            .content_cont {
+                grid-area: text;
+                text-align: center;
+            }
+                .title_cont {
+                    font-size: 2em;
+                }
+                .text_cont {
+                    font-size: 1.4em;
+                }
+            .form_cont {
+                grid-area: form;
+            }
+                .form_block {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    width: 100%;
+                    height: 100%;
+                }
+                label {
+                    font-weight: bold;
+                    font-size: 1.2em;
+                }
+                input {
+                    border: solid #A5FF97 2px;
+                    height: 6%;
+                    margin-bottom: 2%;
+                }
+                textarea {
+                    border: solid #A5FF97 2px;
+                    height: 6%;
+                    margin-bottom: 2%;
+                }
+                .send_btn_cont {
+                    width: 20%;
+                    height: 10%;
+                    background-color: #A5FF97;
+                }
+                
+            .map_cont {
+                grid-area: map;
+            }
+        footer {
+            width: 100%;
+            margin: 10% 0 0 0;
+            text-align: center;
+        }
+}
+@media screen and (min-width: 801px) and (max-width: 1020px) {
+    * {
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+    header {
+        width: 100%;
+        height: 16vh;
+        background-image: url('../img/fundo-topo.jpg');
+        background-size: 100% 100%;
+    }
+
+        .close_img {
+            display: none;
+        }
+        .mobile_menu_btn {
+            display: none;
+        }
+        .logo_header {
+            margin: 0 0 0 44%;
+            padding: 1% 0 1% 0;
+        }
+        nav {
+            margin: 10% 0 0 0;
+            padding: 0 0 0 28.5%;
             display: flex;
             flex-flow: row wrap;
             background-color: white;
@@ -617,7 +834,223 @@
             }
     .produtos_sec {
         display: grid;
-        height: 55vh;
+        height: 100%;
+        grid-template-areas: 
+            'main main main'
+            'prod1 prod2 prod3';
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr;
+    }
+        .main_text_prod {
+            grid-area: main;
+            text-align: center;
+            font-size: 1.4em;
+            padding: 2% 0 0 0;
+        }
+        .prod_1 {
+            grid-area: prod1;
+            margin-left: 15%;
+        }
+        .prod_2 {
+            grid-area: prod2;
+            margin-left: 15%;
+        }
+            .prod_img2 {
+                margin-bottom: 5%;  
+            }
+        .prod_3 {
+            grid-area: prod3;
+            margin-left: 15%;
+        }
+            .prod_img3 {
+                margin-bottom: 12%;  
+            }
+            .prod_btn {
+                width: 35%;
+                height: 20%;
+                background-color: #A5FF97;
+                border: 2px solid #8ae97b;
+                font-size: 1.2em;
+            }
+                .patinha_img_prod {
+                    width: 15%;
+                    height: 40%;
+                    margin: 0 2% 0 0;
+                }
+    .servicos_section {
+        display: flex;
+        flex-flow: row wrap;
+        width: auto;
+        height: 75vh;
+        padding: 1%;
+        justify-content: space-between;
+        background-color: #A5FF97;
+    }
+        .text_serv {
+            width: 49%;
+            height: 100%;
+        }
+            .title_txt {
+                font-size: 2em;
+                margin: 0 0 5% 0;
+            }
+            .p_txt {
+                font-size: 1.4em;
+            }
+        .img_serv {
+            width: 49%;
+            height: 100%;
+            display: grid;
+            grid-template-areas:
+                'img1 img2'
+                'img3 img4';
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            grid-gap: 1%;
+        }
+            .img1 {
+                grid-area: img1;
+                width: 100%;
+                height: 100%;
+            }
+            .img2 {
+                grid-area: img2;
+                width: 100%;
+                height: 100%;
+            }
+            .img3 {
+                grid-area: img3;
+                width: 100%;
+                height: 100%;
+            }
+            .img4 {
+                grid-area: img4;
+                width: 100%;
+                height: 100%;
+            }
+        .contato_sec {
+            display: grid;
+            grid-template-areas:
+                'text text text'
+                'form . map';
+            grid-template-columns: 1fr 0.1fr 1fr;
+            grid-template-rows: auto auto;
+            padding: 1%;
+            grid-gap: 2%;
+        }
+            .content_cont {
+                grid-area: text;
+                text-align: center;
+            }
+                .title_cont {
+                    font-size: 2em;
+                }
+                .text_cont {
+                    font-size: 1.4em;
+                }
+            .form_cont {
+                grid-area: form;
+            }
+                .form_block {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    width: 100%;
+                    height: 100%;
+                }
+                label {
+                    font-weight: bold;
+                    font-size: 1.2em;
+                }
+                input {
+                    border: solid #A5FF97 2px;
+                    height: 6%;
+                    margin-bottom: 2%;
+                }
+                textarea {
+                    border: solid #A5FF97 2px;
+                    height: 6%;
+                    margin-bottom: 2%;
+                }
+                .send_btn_cont {
+                    width: 20%;
+                    height: 10%;
+                    background-color: #A5FF97;
+                }
+                
+            .map_cont {
+                grid-area: map;
+            }
+        footer {
+            width: 100%;
+            margin: 10% 0 0 0;
+            text-align: center;
+        }
+}
+@media screen and (min-width: 1024px) and (max-width: 1440px) { /*original size 1365px*/
+    * {
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+    header {
+        width: 100%;
+        height: 16vh;
+        background-image: url('../img/fundo-topo.jpg');
+        background-size: 100% 100%;
+    }
+
+        .close_img {
+            display: none;
+        }
+        .mobile_menu_btn {
+            display: none;
+        }
+        .logo_header {
+            margin: 0 0 0 45.3%;
+            padding: 1% 0 1% 0;
+        }
+        nav {
+            margin: 9.3% 0 0 0;
+            padding: 0 0 0 31.6%;
+            display: flex;
+            flex-flow: row wrap;
+            background-color: white;
+            width: 61.1%;
+            height: 4vh;
+            color: black;
+        }
+            .nav_option:hover {
+                color: blue;
+                cursor: pointer;
+            }
+            .patinha_img {
+                width: 3%;
+                height: 50%;
+                margin: 1.3% 1% 0 1%;
+            }
+    .sobre_nos_sec {
+        display: flex;
+        flex-flow: row nowrap;
+        background-color: #A5FF97;
+        margin: 3% 0 0 0;
+    }
+        .text_sobre_sec {
+            width: 50%;
+            font-size: 1.4em;
+            padding: 1% 1% 1% 1%;
+        }
+        .img_sobre_sec {
+            width: 50%;
+            padding: 1%;
+        }
+            .filhotes_sobre {
+                width: 90%;
+                height: 100%;
+                margin: 0 0 0 5%;
+            }
+    .produtos_sec {
+        display: grid;
+        height: 100%;
         grid-template-areas: 
             'main main main'
             'prod1 prod2 prod3';
