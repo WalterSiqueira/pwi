@@ -1,4 +1,4 @@
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 320px) {
     * {
         margin: 0;
         padding: 0;
@@ -34,10 +34,12 @@
             width: 100%;
             background-color: white;
             margin-top: 12%;
+            margin: 0;
+            padding: 0;
         }
         .logo_header {
-            margin: 0 0 0 30%;
-            padding: 1% 0 1% 0;
+            margin: 0 0 0 30vw;
+            padding: 1vh 0 1% 0;
         }
         nav {
             padding: 2% 0 0 0;
@@ -306,19 +308,21 @@
             border: solid 2px black;
             font-size: 1.2em; 
             position: sticky;
-            top: 2;
+            top: 0;
             left: 0;
             right: 0;
             height: 5vh;
             width: 100%;
             background-color: white;
+            margin: 0;
+            padding: 0;
         }
         .logo_header {
-            margin: 0 0 0 30%;
+            margin: 0 0 0 35vw;
             padding: 1% 0 1% 0;
         }
         nav {
-            padding: 2% 0 0 0;
+            padding: 2vh 0 0 0;
             display: none;
             grid-template-areas:
                 '. close .'
@@ -560,56 +564,123 @@
         padding: 0;
         border: none;
     }
+    main {
+        display: grid;
+        grid-template-areas: 
+            'header'
+            'sobre'
+            'produtos'
+            'servicos'
+            'contato'
+            'footer';
+        grid-template-columns: 100%;
+        grid-template-rows: 0.02fr 0.3fr 0.90fr 0.50fr 1fr 0.01fr; 
+    }
     header {
         width: 100%;
-        height: 16vh;
+        height: 18vh;
         background-image: url('../img/fundo-topo.jpg');
         background-size: 100% 100%;
+        grid-area: header;
     }
-
-        .close_img {
-            display: none;
-        }
         .mobile_menu_btn {
-            display: none;
+            border: solid 2px black;
+            font-size: 1.2em; 
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5vh;
+            width: 100%;
+            background-color: white;
+            margin: 0;
+            padding: 0;
         }
         .logo_header {
-            margin: 0 0 0 43%;
-            padding: 5% 0 1% 0;
+            margin: 0 0 0 36vw;
+            padding: 1% 0 1% 0;
         }
         nav {
-            margin: 18.5% 0 0 0;
-            padding: 0 0 0 29%;
-            display: flex;
-            flex-flow: row wrap;
-            background-color: white;
-            width: 61.1%;
-            height: 4.2vh;
-            color: black;
-            font-size: 1.4em;
+            padding: 2vh 0 0 0;
+            display: none;
+            grid-template-areas:
+                '. close .'
+                '. sobre .'
+                '. pata1 .'
+                '. produtos .'
+                '. pata2 .'
+                '. servicos .'
+                '. pata3 .'
+                '. contato .'
+                '. . .';
+            grid-template-columns: 0.1fr 1fr 0.1fr;
+            grid-template-rows: 0.3fr  0.3fr 0.3fr 0.2fr 0.3fr 0.2fr 0.3fr 0.2fr 0.3fr 0.1fr; 
+            grid-row-gap: 2%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            text-align: center;
+            font-size: 1.6em;
+            color: white;
         }
+            .close_img {
+                grid-area: close; 
+                width: 20%;
+                height: 80%;
+                margin: 0 0 0 40%;
+            }
             .nav_option:hover {
                 color: blue;
                 cursor: pointer;
             }
-            .patinha_img {
-                width: 3%;
-                height: 45%;
-                margin: 1% 1% 0 1%;
+                .sobre {
+                    grid-area: sobre; 
+                }
+                .produtos {
+                    grid-area: produtos; 
+                }
+                .servicos {
+                    grid-area: servicos; 
+                }
+                .contato {
+                    grid-area: contato; 
+                }
+            nav h2 {
+                font-size: 1em;
             }
+            .patinha_img {
+                width: 10%;
+                height: 25%;
+                margin: 0.5% 1% 0 47%;
+            }
+                .pata_1 {
+                    grid-area: pata1; 
+                }
+                .pata_2 {
+                    grid-area: pata2; 
+                }
+                .pata_3 {
+                    grid-area: pata3; 
+                }
+    
     .sobre_nos_sec {
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: column nowrap;
         background-color: #A5FF97;
-        margin: 5% 0 0 0;
+        margin: 6% 0 0 0;
+        grid-area: sobre;
     }
         .text_sobre_sec {
-            width: 50%;
+            width: 100%;
             font-size: 1.4em;
-            padding: 1% 1% 1% 1%;
+            text-align: center;
         }
         .img_sobre_sec {
-            width: 50%;
+            width: 100%;
             padding: 1%;
         }
             .filhotes_sobre {
@@ -618,40 +689,38 @@
                 margin: 0 0 0 5%;
             }
     .produtos_sec {
-        display: grid;
-        height: 100%;
-        grid-template-areas: 
-            'main main main'
-            'prod1 prod2 prod3';
-        grid-template-columns: 1fr 1fr 1fr; 
-        grid-template-rows: 1fr 1fr;
+        display: flex;
+        flex-flow: column nowrap;
+        height: 55vh;
+        text-align: center;
+        grid-area: produtos;
     }
         .main_text_prod {
             grid-area: main;
             text-align: center;
-            font-size: 1.2em;
+            font-size: 1.4em;
             padding: 2% 0 0 0;
         }
         .prod_1 {
             grid-area: prod1;
-            margin-left: 15%;
+            margin: 0 0 5% 0;
         }
         .prod_2 {
             grid-area: prod2;
-            margin-left: 15%;
+            margin: 0 0 5% 0;
         }
             .prod_img2 {
                 margin-bottom: 5%;  
             }
         .prod_3 {
             grid-area: prod3;
-            margin-left: 15%;
+            margin: 0 0 5% 0;
         }
             .prod_img3 {
                 margin-bottom: 12%;  
             }
             .prod_btn {
-                width: 35%;
+                width: 68%;
                 height: 20%;
                 background-color: #A5FF97;
                 border: 2px solid #8ae97b;
@@ -662,29 +731,27 @@
                     height: 40%;
                     margin: 0 2% 0 0;
                 }
-    .servicos_section {
+    .servicos_section {    
         display: flex;
-        flex-flow: row wrap;
-        width: auto;
-        height: 77vh;
+        flex-flow: column nowrap;
+        width: 98%;
         padding: 1%;
         justify-content: space-between;
         background-color: #A5FF97;
+        grid-area: servicos;
     }
         .text_serv {
-            width: 49%;
-            height: 100%;
+            font-size: 1.2em;
+            text-align: center;
         }
             .title_txt {
                 font-size: 2em;
                 margin: 0 0 5% 0;
             }
             .p_txt {
-                font-size: 1.2em;
+                font-size: 1.4em;
             }
         .img_serv {
-            width: 49%;
-            height: 100%;
             display: grid;
             grid-template-areas:
                 'img1 img2'
@@ -713,65 +780,64 @@
                 width: 100%;
                 height: 100%;
             }
-        .contato_sec {
-            display: grid;
-            grid-template-areas:
-                'text text text'
-                'form . map';
-            grid-template-columns: 1fr 0.1fr 1fr;
-            grid-template-rows: auto auto;
-            padding: 1%;
-            grid-gap: 2%;
-        }
-            .content_cont {
-                grid-area: text;
-                text-align: center;
-            }
-                .title_cont {
-                    font-size: 2em;
-                }
-                .text_cont {
-                    font-size: 1.4em;
-                }
-            .form_cont {
-                grid-area: form;
-            }
-                .form_block {
-                    display: flex;
-                    flex-flow: column nowrap;
-                    width: 100%;
-                    height: 100%;
-                }
-                label {
-                    font-weight: bold;
-                    font-size: 1.2em;
-                }
-                input {
-                    border: solid #A5FF97 2px;
-                    height: 6%;
-                    margin-bottom: 2%;
-                }
-                textarea {
-                    border: solid #A5FF97 2px;
-                    height: 6%;
-                    margin-bottom: 2%;
-                }
-                .send_btn_cont {
-                    width: 20%;
-                    height: 10%;
-                    background-color: #A5FF97;
-                }
-                
-            .map_cont {
-                grid-area: map;
-            }
-        footer {
-            width: 100%;
-            margin: 10% 0 0 0;
+    .contato_sec {
+        display: flex;
+        flex-flow: column nowrap;
+        padding: 1%;
+        grid-area: contato;
+    }
+        .content_cont {
             text-align: center;
         }
+            .title_cont {
+                font-size: 2em;
+            }
+            .text_cont {
+                font-size: 1.4em;
+            }
+        .form_cont {
+
+        }
+            .form_block {
+                display: flex;
+                flex-flow: column nowrap;
+                width: 100%;
+                height: 100%;
+            }
+            label {
+                font-weight: bold;
+                font-size: 1.2em;
+            }
+            input {
+                border: solid #A5FF97 2px;
+                height: 6%;
+                margin-bottom: 2%;
+            }
+            textarea {
+                border: solid #A5FF97 2px;
+                height: 6%;
+                margin-bottom: 2%;
+            }
+            .send_btn_cont {
+                width: 20%;
+                height: 10%;
+                background-color: #A5FF97;
+            }
+            
+        .map_cont {
+            width: 100%;
+        }
+            iframe {
+                width: 100%;
+            }
+    footer {
+        width: 100%;
+        margin: 10% 0 0 0;
+        text-align: center;
+        grid-area: footer;
+    }
 }
-@media screen and (min-width: 801px) and (max-width: 1020px) {
+@media screen and (min-width: 801px) and (max-width: 1023px) {
     * {
         margin: 0;
         padding: 0;
@@ -791,12 +857,12 @@
             display: none;
         }
         .logo_header {
-            margin: 0 0 0 44%;
-            padding: 1% 0 1% 0;
+            margin: 0 0 0 44vw;
+            padding: 0vh 0 0 0;
         }
         nav {
-            margin: 10% 0 0 0;
-            padding: 0 0 0 28.5%;
+            margin: 0vh 0 0 0;
+            padding: 0 0 0 30.3vw;
             display: flex;
             flex-flow: row wrap;
             background-color: white;
@@ -811,13 +877,13 @@
             .patinha_img {
                 width: 3%;
                 height: 50%;
-                margin: 1.3% 1% 0 1%;
+                margin: 1.6vh 1% 0 1%;
             }
     .sobre_nos_sec {
         display: flex;
         flex-flow: row nowrap;
         background-color: #A5FF97;
-        margin: 3% 0 0 0;
+        margin: 3vh 0 0 0;
     }
         .text_sobre_sec {
             width: 50%;
@@ -987,7 +1053,7 @@
             text-align: center;
         }
 }
-@media screen and (min-width: 1024px) and (max-width: 1440px) { /*original size 1365px*/
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
     * {
         margin: 0;
         padding: 0;
@@ -1007,39 +1073,18 @@
             display: none;
         }
         .logo_header {
-            margin: 0 0 0 45.3%;
-            padding: 3% 0 1% 0;
+            margin: 0 0 0 46vw;
+            padding: 0vh 0 0 0;
         }
         nav {
-            margin: 14% 0 0 0;
-            padding: 0 0 0 31.6%;
+            margin: 1vh 0 0 0;
+            padding: 0 0 0 34.5vw;
             display: flex;
             flex-flow: row wrap;
             background-color: white;
             width: 61.1%;
             height: 4vh;
             color: black;
-        }
-        @media screen and (min-width: 1300px) and (max-width: 1440px){
-            .logo_header {
-                margin: 0 0 0 47%;
-                padding: 2% 0 1% 0;
-            }
-            nav {
-                margin: 11.5% 0 0 0;
-                padding: 0 0 0 36%;
-                display: flex;
-                flex-flow: row wrap;
-                background-color: white;
-                width: 61.1%;
-                height: 4vh;
-                color: black;
-            }  
-            .patinha_img {
-                width: 3%;
-                height: 45%;
-                margin: 1% 1% 0 1%;
-            } 
         }
             .nav_option:hover {
                 color: blue;
@@ -1224,7 +1269,7 @@
             text-align: center;
         }
 }
-@media screen and (min-width: 1441px) {
+@media screen and (min-width: 1200px) {
     * {
         margin: 0;
         padding: 0;
@@ -1244,12 +1289,12 @@
             display: none;
         }
         .logo_header {
-            margin: 0 0 0 48%;
-            padding: 1% 0 1% 0;
+            margin: 0 0 0 46.5vw;
+            padding: 1vh 0 0 0;
         }
         nav {
-            margin: 9% 0 0 0;
-            padding: 0 0 0 38.5%;
+            margin: 3vh 0 0 0;
+            padding: 0 0 0 36vw;
             display: flex;
             flex-flow: row wrap;
             background-color: white;
