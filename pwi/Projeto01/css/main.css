@@ -1,0 +1,59 @@
+@media screen and (max-width: 320px) {
+    body {
+        width: 100vw;
+        height: 100vh;
+    }
+    main {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-areas: 
+            'header'
+            'sobre'
+            'produtos'
+            'servicos'
+            'contatos'
+            'footer';
+        grid-template-columns: auto;
+        grid-template-rows: 20vh 50vh 50vh 50vh 50vh 50vh;
+    }
+        header {
+            grid-area: header;
+            display: grid;
+            grid-template-areas:
+                'logo'
+                'menu';
+            grid-template-columns: auto;
+            grid-template-rows: 15vh 5vh;
+            background-image: url('../img/fundo-topo.jpg');
+            background-size: 100% 100%;
+        }
+            .logo_header {
+                grid-area: logo;
+                margin: 0 0 0 71vw;
+            }
+            .mobile_menu_btn {
+                grid-area: menu;
+                border: solid 2px black;
+                background-color: white;
+                font-size: 1.2em;
+            }
+            nav {
+                display: none;
+            }
+        .sobre_nos_sec {
+            grid-area: sobre;
+        }
+        .produtos_sec {
+            grid-area: produtos;
+        }
+        .servicos_section {
+            grid-area: servicos;
+        }
+        .contatos_sec {
+            grid-area: contatos;
+        }
+        footer {
+            grid-area: footer
+        }
+}
