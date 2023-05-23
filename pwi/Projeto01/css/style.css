@@ -1,4 +1,47 @@
+footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    grid-area: footer;
+    text-align: center;
+    margin: 5vh 0 0 0;
+    background-color: #A5FF97;
+}
+    .social_block {
+        display: grid;
+        grid-template-areas: 
+            'patinha title'
+            'logos logos';
+        grid-template-columns: 0.3fr 1fr;
+        grid-template-rows: auto;
+        grid-row-gap: 5vh;
+    }
+    .patinha_social {
+        grid-area: patinha;
+        margin: 1vh 0 0 0;
+    }
+    .title_social {
+        grid-area: title;
+    }
+    .logos_social {
+        grid-area: logos;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
+    .logos_social img {
+        width: 3vw;
+        height: 5vh;
+    }
+    h4 {
+        padding: 4vh 0 0 0;
+    }
 @media screen and (max-width: 320px) {
+
+    .logos_social img {
+        width: 7vw;
+        height: 5vh;
+    }
     * {
         margin: 0;
         padding: 0;
@@ -280,6 +323,10 @@
     }
 }
 @media screen and (min-width: 321px) and (max-width: 480px) {
+    .logos_social img {
+        width: 7vw;
+        height: 5vh;
+    }
     * {
         margin: 0;
         padding: 0;
@@ -559,6 +606,10 @@
     }
 }
 @media screen and (min-width: 481px) and (max-width: 800px) {
+    .logos_social img {
+        width: 7vw;
+        height: 5vh;
+    }
     * {
         margin: 0;
         padding: 0;
@@ -1053,7 +1104,7 @@
             text-align: center;
         }
 }
-@media screen and (min-width: 1024px) and (max-width: 1200px) {
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
     * {
         margin: 0;
         padding: 0;
@@ -1263,11 +1314,6 @@
             .map_cont {
                 grid-area: map;
             }
-        footer {
-            width: 100%;
-            margin: 10% 0 0 0;
-            text-align: center;
-        }
 }
 @media screen and (min-width: 1200px) {
     * {
@@ -1338,7 +1384,7 @@
             'main main main'
             'prod1 prod2 prod3';
         grid-template-columns: 1fr 1fr 1fr; 
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr 2fr;
     }
         .main_text_prod {
             grid-area: main;
@@ -1479,9 +1525,4 @@
             .map_cont {
                 grid-area: map;
             }
-        footer {
-            width: 100%;
-            margin: 10% 0 0 0;
-            text-align: center;
-        }
 }
