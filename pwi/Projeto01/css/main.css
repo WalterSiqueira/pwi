@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
     font-family: roboto;
+    text-decoration: none;
+}
+a {
+    text-decoration: none;
 }
 @media screen and (max-width: 320px) {
     body {
@@ -45,6 +49,9 @@
             }
             nav {
                 display: none;
+            }
+            .option {
+                text-decoration: none;
             }
         .sobre_nos_sec {
             grid-area: sobre;
@@ -1350,6 +1357,11 @@
     p { 
         font-size: 1.6em;
     }
+    .option:hover {
+    color: blue;
+    cursor: pointer;
+}
+
     main {
         width: 100vw;
         height: 100vh;
