@@ -1,3 +1,7 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 @media screen and (max-width: 320px) {
     body {
         width: 100vw;
@@ -14,8 +18,8 @@
             'servicos'
             'contatos'
             'footer';
-        grid-template-columns: auto;
-        grid-template-rows: 20vh 50vh 50vh 50vh 50vh 50vh;
+        grid-template-columns: 100vw;
+        grid-template-rows: 20vh 90vh 155vh 100vh 250vh 50vh;
     }
         header {
             grid-area: header;
@@ -23,14 +27,14 @@
             grid-template-areas:
                 'logo'
                 'menu';
-            grid-template-columns: auto;
+            grid-template-columns: 100vw;
             grid-template-rows: 15vh 5vh;
             background-image: url('../img/fundo-topo.jpg');
             background-size: 100% 100%;
         }
             .logo_header {
                 grid-area: logo;
-                margin: 0 0 0 71vw;
+                margin: 0 0 0 29vw;
             }
             .mobile_menu_btn {
                 grid-area: menu;
@@ -43,17 +47,106 @@
             }
         .sobre_nos_sec {
             grid-area: sobre;
+            display: grid;
+            grid-template-areas:
+                'text'
+                'img';
+            grid-template-columns: 100vw;
+            grid-template-rows: 40vh 40vh;
         }
+            .text_sobre_sec {
+                grid-area: text;
+                text-align: center;
+            }
+            .img_sobre_sec {
+                grid-area: img;
+                width: 100%;
+                height: 100%;
+            }
+                .filhotes_sobre {
+                    width: 100%;
+                    height: 100%;
+                }
         .produtos_sec {
             grid-area: produtos;
+            display: grid;
+            grid-template-areas: 
+                'text'
+                'prodone'
+                'prodtwo'
+                'prodthree';
+            grid-template-columns: 100vw;
+            grid-template-rows: 30vh 45vh 45vh 45vh;
         }
         .servicos_section {
             grid-area: servicos;
+            display: grid;
+            grid-template-areas: 
+                'text'
+                'img';
+            grid-template-columns: 100vw;
+            grid-template-rows: 40vh 50vh;
         }
-        .contatos_sec {
+            .text_serv {
+                grid-area: text;
+            }
+            .img_serv {
+                grid-area: img;
+                display: grid;
+                grid-template-areas:
+                    'one two'
+                    'three four';
+                grid-template-columns: 50vw 50vw;
+                grid-template-rows: 50vw 50vw;
+            }
+                .img1 {
+                    grid-area: one;
+                    width: 100%;
+                    height: 100%;
+                }
+                .img2 {
+                    grid-area: two;
+                    width: 100%;
+                    height: 100%;
+                }
+                .img3 {
+                    grid-area: three;
+                    width: 100%;
+                    height: 100%;
+                }
+                .img4 {
+                    grid-area: four;
+                    width: 100%;
+                    height: 100%;
+                }
+        .contato_sec {
             grid-area: contatos;
+            display: grid;
+            grid-template-areas: 
+                'text'
+                'form'
+                'map';
+            grid-template-columns: 100vw;
+            grid-template-rows: 100vh 50vh 100vh;
         }
+            .form_cont {
+                display: grid;
+                grid-template-areas: 
+                    'nome n_input'
+                    'email e_input'
+                    'telefone t_input'
+                    'assunto a_input'
+                    'menssagem m_input'
+                    'enviar .';
+                grid-template-columns: 10vw 50vw;
+                grid-template-rows: 20fh 20vh 20vh 20vh 20vh 20vh;
+            }
+            iframe {
+                width: 100vw;
+                height: 100vh;
+            }
         footer {
-            grid-area: footer
+            grid-area: footer;
+            display: none;
         }
 }
