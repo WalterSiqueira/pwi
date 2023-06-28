@@ -24,7 +24,7 @@ a {
             'contatos'
             'footer';
         grid-template-columns: 100vw;
-        grid-template-rows: 20vh 80vh 155vh 99vh 265vh 20vh;
+        grid-template-rows: 50vh 80vh 155vh 99vh 265vh 20vh;
     }
         header {
             grid-area: header;
@@ -33,7 +33,7 @@ a {
                 'logo'
                 'menu';
             grid-template-columns: 100vw;
-            grid-template-rows: 15vh 5vh;
+            grid-template-rows: 22vh 20vh;
             background-image: url('../img/fundo-topo.jpg');
             background-size: 100% 100%;
         }
@@ -42,14 +42,47 @@ a {
                 margin: 0 0 0 29vw;
             }
             .mobile_menu_btn {
+                display: none;
                 grid-area: menu;
                 border: solid 2px black;
                 background-color: white;
                 font-size: 1.2em;
             }
             nav {
-                display: none;
+                display: flex;
+                grid-area: menu;
+                flex-flow: column nowrap;
+                justify-content: space-evenly;
+                align-items: center;
             }
+                .close_img {
+                    display: none;
+                }
+                .pata_1 {
+                    order: 1;
+                }
+                .sobre {
+                    order: 2;
+                }
+                .produtos {
+                    order: 3;
+                }
+                .pata_2 {
+                    display: none;
+                }
+                .servicos {
+                    order: 5;
+                }
+                .pata_4 {
+                    order: 6;
+                }
+                .contato {
+                    order: 7;
+                    display: block;
+                }
+                .pata_3 {
+                    order: 8;
+                }
             .option {
                 text-decoration: none;
             }
@@ -283,7 +316,7 @@ a {
             'contatos'
             'footer';
         grid-template-columns: 100vw;
-        grid-template-rows: 20vh 80vh 155vh 130vh 265vh 20vh;
+        grid-template-rows: 50vh 80vh 155vh 130vh 265vh 20vh;
     }
         header {
             grid-area: header;
@@ -292,23 +325,57 @@ a {
                 'logo'
                 'menu';
             grid-template-columns: 100vw;
-            grid-template-rows: 15vh 5vh;
+            grid-template-rows: 22vh 20vh;
             background-image: url('../img/fundo-topo.jpg');
             background-size: 100% 100%;
         }
             .logo_header {
                 grid-area: logo;
-                margin: 0 0 0 29vw;
+                margin: 0 0 0 31vw;
             }
             .mobile_menu_btn {
+                display: none;
                 grid-area: menu;
                 border: solid 2px black;
                 background-color: white;
                 font-size: 1.2em;
             }
             nav {
-                display: none;
+                display: flex;
+                grid-area: menu;
+                flex-flow: column nowrap;
+                justify-content: space-evenly;
+                align-items: center;
             }
+                .close_img {
+                    display: none;
+                }
+                .pata_1 {
+                    order: 1;
+                }
+                .sobre {
+                    order: 2;
+                }
+                .produtos {
+                    order: 3;
+                }
+                .pata_2 {
+                    display: none;
+                }
+                .servicos {
+                    order: 5;
+                }
+                .pata_4 {
+                    order: 6;
+                }
+                .contato {
+                    order: 7;
+                    display: block;
+                }
+                .pata_3 {
+                    order: 8;
+                }
+ 
         .sobre_nos_sec {
             grid-area: sobre;
             display: grid;
@@ -539,7 +606,7 @@ a {
             'contatos'
             'footer';
         grid-template-columns: 100vw;
-        grid-template-rows: 20vh 80vh 155vh 99vh 265vh 20vh;
+        grid-template-rows: 50vh 80vh 155vh 99vh 265vh 20vh;
     }
         header {
             grid-area: header;
@@ -548,23 +615,57 @@ a {
                 'logo'
                 'menu';
             grid-template-columns: 100vw;
-            grid-template-rows: 15vh 5vh;
+            grid-template-rows: 22vh 20vh;
             background-image: url('../img/fundo-topo.jpg');
             background-size: 100% 100%;
         }
             .logo_header {
                 grid-area: logo;
-                margin: 0 0 0 29vw;
+                margin: 0 0 0 37vw;
             }
             .mobile_menu_btn {
+                display: none;
                 grid-area: menu;
                 border: solid 2px black;
                 background-color: white;
                 font-size: 1.2em;
             }
             nav {
-                display: none;
+                display: flex;
+                grid-area: menu;
+                flex-flow: column nowrap;
+                justify-content: space-evenly;
+                align-items: center;
             }
+                .close_img {
+                    display: none;
+                }
+                .pata_1 {
+                    order: 1;
+                }
+                .sobre {
+                    order: 2;
+                }
+                .produtos {
+                    order: 3;
+                }
+                .pata_2 {
+                    display: none;
+                }
+                .servicos {
+                    order: 5;
+                }
+                .pata_4 {
+                    order: 6;
+                }
+                .contato {
+                    order: 7;
+                    display: block;
+                }
+                .pata_3 {
+                    order: 8;
+                }
+ 
         .sobre_nos_sec {
             grid-area: sobre;
             display: grid;
